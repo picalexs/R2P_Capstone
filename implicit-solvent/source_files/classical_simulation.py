@@ -22,23 +22,27 @@ mol = gto.M()
 mol.atom = mol_geo
 # PROMPT:
 # BEGIN ANSWER
-mol.basis = "<XXX>"
-mol.unit= "<XXX>"
-mol.charge= "<XXX>"
-mol.spin= "<XXX>"
+mol.basis = "6-31g"
+mol.unit= "Angstrom"
+mol.charge= 0
+mol.spin= 0
 mol.verbose=0
 # END ANSWER
 
 print(f">>>>> BUILDING MOLECULE")
 # PROMPT: FILL THIS CODE IN (only 1 line is missing)
+mol.build()
 
 print(f">>>>> DEFINING PCM")
 # PROMPT: FILL THIS CODE IN (4 lines are missing)
-cm = "<XXX>"
+cm = pcm.PCM(mol)
+cm.eps = eps
+cm.method = "IEFPCM"
+cm.build()
 
 print(f">>>>> BUILDING RESTRICTED HARTREE FOCK")
 # PROMPT: FILL THIS CODE IN (1 line is missing)
-mf = "<XXX>"
+mf = scf.RHF(mol).PCM(cm)
 mf.kernel(verbose=0)
 
 # Atomic Valence Active Space, constructs Molecular Orbitals from Atomic Orbitals
