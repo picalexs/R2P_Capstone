@@ -22,7 +22,7 @@ mol = gto.M()
 mol.atom = mol_geo
 # PROMPT:
 # BEGIN ANSWER
-mol.basis = "6-31g"
+mol.basis = "cc-pVDZ"
 mol.unit= "Angstrom"
 mol.charge= 0
 mol.spin= 0
