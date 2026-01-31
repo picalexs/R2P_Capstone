@@ -117,6 +117,7 @@ pip install -r requirements-windows.txt
 ```
 R2P_Capstone/
 ├── Guide_and_install.ipynb    # Installation guide and project overview
+├── LICENSE                    # CC BY-NC 4.0 License
 ├── Ranking.png                # Final competition ranking
 ├── qmoo/                      # Challenge 1: Quantum Multi-Objective Optimization
 ├── implicit-solvent/          # Challenge 2: Implicit Solvent simulations
@@ -129,4 +130,4 @@ R2P_Capstone/
 
 ## License
 
-This project was completed as part of the R2P Quantum Computing program.
+This project was completed as part of the R2P Quantum Computing program and is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**. See the [LICENSE](./LICENSE) file for details.
